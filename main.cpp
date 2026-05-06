@@ -1,16 +1,20 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
-int main() {
-    string name = "John";
-    int age;
-    age = 18;
+//Define the function first
+void sayHi(string name, int age);
 
-    cout << "His name is " << name << endl;
-    cout << name << " loves to ride bikes" << endl;
-    cout << name << " is " << age << " years old" << endl;
-    cout << "He turned " << age << " years old yesterday" << endl;
+int main() {
+
+    sayHi("Mike", 12);
 
     return 0;
+}
+
+//Add details later 
+void sayHi(string name, int age) {
+    cout << "Hello " << name << endl;
+    cout << "You are " << age << " years old" << endl;
 }
