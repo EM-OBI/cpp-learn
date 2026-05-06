@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/godwinbassey/Documents/BYU/CSE 310/cpp/main'
+relocations:     []
+...
