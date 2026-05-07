@@ -3,20 +3,25 @@
 
 using namespace std; 
 
+class Book {
+    public:
+        string title;
+        string author;
+        int pages;
+
+        Book(string aTitle, string aAuthor, int aPages) {
+            title = aTitle;
+            author = aAuthor;
+            pages = aPages;
+        }
+
+};
+
 int main() {
     
-    int numberGrid[3][2] =  {
-        {1, 2},
-        {3, 4},
-        {5, 6}
-    };
+    Book book1("The God Delusion", "Richard Dawkins", 165);
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 2; j++) {
-            cout << numberGrid[i][j];
-        }
-        cout << endl;
-    }
+    cout << book1.title << endl;
 
     return 0;
 }
