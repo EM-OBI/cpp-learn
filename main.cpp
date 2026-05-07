@@ -15,7 +15,7 @@ int main() {
     int guessCount = 0;
     
     while (guess != number) {
-        cout << "Guess a number between 0 and " << upper << endl;
+        cout << "Guess a number between 0 and " << upper - 1 << endl;
         cin >> guess;
         guessCount++;
         if (guess > number) {
