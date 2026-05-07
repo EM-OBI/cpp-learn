@@ -6,14 +6,26 @@ using namespace std;
 
 
 int main() {
+    srand(time(0));
+    int upper = 11;
+    int number = rand() % upper;
+    
+    int guess;
 
-    int index = 6;
-
-    do {
-        cout << index << endl;
-        index++;
+    int guessCount = 0;
+    
+    while (guess != number) {
+        cout << "Guess a number between 0 and " << upper << endl;
+        cin >> guess;
+        guessCount++;
+        if (guess > number) {
+            cout << "Too high, try again!" << endl;
+        } else {
+            cout << "Too low, try again!" << endl;
+        }
     }
-    while (index <= 5);
+    
+    cout << "Congrats! you guessed " << guess << " after " << guessCount << " guesses!" << endl;
 
     return 0;
 }
