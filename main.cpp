@@ -3,31 +3,34 @@
 
 using namespace std; 
 
-class Student {
-   public:
-    string name;
-    string major;
-    double gpa;
-    Student(string aName, string aMajor, double aGpa) {
-        name = aName;
-        major = aMajor;
-        gpa = aGpa;
+class Movie {
+    private: 
+        string rating;
+    public: 
+        string title;
+        string director;
+        
+        Movie (string aTitle, string aDirector, string aRating) {
+            title = aTitle;
+            director = aDirector;
+            setRating(aRating);
+        }
+
+    void setRating (string aRating) {
+        rating = aRating;
     }
 
-    bool hasHonors() {
-        if (gpa >= 3.5) {
-            return true;
-        }
-        return false;
+    string getRating(){
+        return rating;
     }
 };
 
 int main() {
     
-    Student student1("Mary", "Maths", 4.0);
-    Student student2("John", "Jungle Studies", 3.2);
+    Movie avengers("The Avengers", "Joss Whedon", "PG-13");
 
-    cout << student2.hasHonors() << endl;
+    avengers.setRating("Dog");
+    cout << avengers.getRating() << endl;
 
     return 0;
 }
