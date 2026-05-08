@@ -3,25 +3,31 @@
 
 using namespace std; 
 
-class Book {
-    public:
-        string title;
-        string author;
-        int pages;
+class Student {
+   public:
+    string name;
+    string major;
+    double gpa;
+    Student(string aName, string aMajor, double aGpa) {
+        name = aName;
+        major = aMajor;
+        gpa = aGpa;
+    }
 
-        Book(string aTitle, string aAuthor, int aPages) {
-            title = aTitle;
-            author = aAuthor;
-            pages = aPages;
+    bool hasHonors() {
+        if (gpa >= 3.5) {
+            return true;
         }
-
+        return false;
+    }
 };
 
 int main() {
     
-    Book book1("The God Delusion", "Richard Dawkins", 165);
+    Student student1("Mary", "Maths", 4.0);
+    Student student2("John", "Jungle Studies", 3.2);
 
-    cout << book1.title << endl;
+    cout << student2.hasHonors() << endl;
 
     return 0;
 }
